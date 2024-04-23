@@ -1,4 +1,4 @@
-version: 2.1
+version: 2
 
 jobs:
   plan-apply:
@@ -80,3 +80,4 @@ workflows:
       - destroy:
           requires:
             - hold-destroy
+6.
