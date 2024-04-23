@@ -1,3 +1,3 @@
 region = "us-west-2"
-label  = "hashicorp"
+label  = "hashicorp.fun"
 app    = "chess"
