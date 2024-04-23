@@ -80,4 +80,3 @@ workflows:
       - destroy:
           requires:
             - hold-destroy
-6.
