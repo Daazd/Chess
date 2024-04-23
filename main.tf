@@ -10,24 +10,10 @@
 
  resource "random_uuid" "randomid" {}
 
- terraform {
-  cloud {
-    organization = "Vault1"
-
-    workspaces {
-      name = "Automation-learning"
-    }
-  }
-
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 4.4.0"
-    }
-  }
-
-  required_version = ">= 1.2.0"
+terraform {
+  required_version = ">= 1.2.0" 
 }
+
 
  resource "aws_s3_bucket" "game_assets_bucket" {
    tags = {
@@ -47,7 +33,7 @@
  }
 
  resource "aws_s3_bucket_acl" "bucket" {
-   bucket = aws_s3_bucket.app.id
+   bucket = aws_s3_bucket.game_assets_bucket.id
    acl    = "public-read"
  }
 
