@@ -3,7 +3,7 @@ terraform {
     hostname     = "app.terraform.io"
     organization = "Vault1"
     workspaces {
-      prefix = "Automation-learning"
+      name = "Automation-learning"
     }
   }
 
