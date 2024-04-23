@@ -28,7 +28,7 @@ terraform {
    acl          = "public-read"
    key          = "index.html"
    bucket       = aws_s3_bucket.game_assets_bucket.id
-   content      = file(".chess-game/public/index.html")
+   content      = file("../.chess-game/public/index.html")
    content_type = "text/html"
  }
 
