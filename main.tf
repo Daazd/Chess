@@ -30,10 +30,6 @@ terraform {
    content_type = "text/html"
  }
 
- resource "aws_s3_bucket_acl" "bucket" {
-   bucket = aws_s3_bucket.game_assets_bucket.id
- }
-
  resource "aws_s3_bucket_website_configuration" "terramino" {
    bucket = aws_s3_bucket.game_assets_bucket.bucket
 
