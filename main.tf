@@ -26,7 +26,7 @@
     }
   }
 
-  required_version = ">= 1.2.0"
+  required_version = "= 2.0.0"
 }
 
  resource "aws_s3_bucket" "game_assets_bucket" {
@@ -34,7 +34,7 @@
      Name = "Chess Game Assets Bucket"
    }
 
-   bucket        = "my-chess-game-assets"
+   bucket        = "${var.app}.${var.label}.${random_uuid.randomid.result}"
     acl          = "private"
  }
 
