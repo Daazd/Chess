@@ -7,7 +7,13 @@ terraform {
     }
   }
 
-  cloud {}
+  cloud {
+    organization = "Vault1"
+
+    workspaces {
+      name = "Automation-learning"
+    }
+  }
 
   required_providers {
     aws = {
