@@ -21,11 +21,9 @@ terraform {
    }
 
    bucket        = "${var.app}.${var.label}.${random_uuid.randomid.result}"
-    acl          = "private"
  }
 
  resource "aws_s3_bucket_object" "app" {
-   acl          = "public-read"
    key          = "index.html"
    bucket       = aws_s3_bucket.game_assets_bucket.id
    content      = file("./chess-game/public/index.html")
@@ -34,7 +32,6 @@ terraform {
 
  resource "aws_s3_bucket_acl" "bucket" {
    bucket = aws_s3_bucket.game_assets_bucket.id
-   acl    = "public-read"
  }
 
  resource "aws_s3_bucket_website_configuration" "terramino" {
