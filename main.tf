@@ -26,7 +26,7 @@
     }
   }
 
-  required_version = "= 2.0.0"
+  required_version = ">= 1.2.0"
 }
 
  resource "aws_s3_bucket" "game_assets_bucket" {
